@@ -1,42 +1,35 @@
 # toluwagbemiga.github.io
 
-Personal portfolio site for Tolulope Gbenga — Software Engineer (Android & Blockchain).
+Tolulope Gbenga's personal site, live at <https://toluwagbemiga.github.io>.
 
-Live at: https://toluwagbemiga.github.io
+Plain HTML, CSS and JavaScript: no framework and no build pipeline to deploy. `index.html` is
+generated from `data/profile.json`, so the site's facts live in one file.
 
-## Stack
+## Editing the site
 
-Plain HTML, CSS and JavaScript. No build step, no framework, no bundler — just static files served by GitHub Pages.
+1. Edit `data/profile.json` (experience, projects, skills, certifications, what you're open to).
+2. Rebuild:
 
-## Structure
-
-```
-index.html                       Main site
-css/styles.css                   All styles (design tokens, light/dark themes)
-js/main.js                       Theme toggle, mobile nav, project filters, scroll reveal
-assets/favicon.svg               Favicon (generated SVG monogram)
-assets/og-image.png              Social preview image
-assets/Tolulope_Gbenga_CV.pdf    Downloadable CV (generated from cv.html)
-cv.html                          Standalone, print-ready CV source (A4)
-404.html                         Custom not-found page
-robots.txt / sitemap.xml         Basic SEO
-.nojekyll                        Disables Jekyll processing on GitHub Pages
-```
-
-## Updating content
-
-All content is sourced from Tolulope's verified profile data. To update:
-
-1. Edit `index.html` directly (experience, projects, skills, etc. are hand-written HTML; the skills grid is rendered from a small JS array at the bottom of the file).
-2. Edit `cv.html` for the CV, then regenerate the PDF with Playwright:
+   ```bash
+   python build.py            # regenerate index.html
+   python build.py --pdf      # also re-print assets/Tolulope_Gbenga_CV.pdf from cv.html
    ```
-   page.goto("file:///path/to/cv.html")
-   page.pdf(path="assets/Tolulope_Gbenga_CV.pdf", format="A4", print_background=True)
-   ```
-3. Commit and push to `main` — GitHub Pages deploys automatically.
 
-## Local preview
+   Needs `jinja2` (and Playwright for `--pdf`).
+3. Check it locally: `python -m http.server` and open <http://localhost:8000>.
+4. Commit and push to `main`. GitHub Pages publishes within a minute or two.
 
-```
-python -m http.server 8000
-```
+## Layout
+
+| Path | What it is |
+|---|---|
+| `data/profile.json` | Every fact on the site |
+| `templates/index.html.j2` | Page template |
+| `build.py` | Renders the template, groups and tags projects, prints the CV PDF |
+| `css/styles.css` | Design tokens, dark and light themes, layout |
+| `js/main.js` | Theme toggle, mobile nav, project filters, scroll reveals |
+| `cv.html` | Print-ready CV, the source of the PDF |
+| `assets/` | CV PDF, favicon, social preview image |
+
+The theme follows the visitor's system setting and can be switched in the header; the choice is
+remembered. Nothing on the site is collected or tracked.
