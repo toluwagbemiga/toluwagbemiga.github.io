@@ -1,119 +1,78 @@
-(function () {
-  "use strict";
+// Theme toggle, mobile nav, project filters, scroll reveals, active section in the header.
+(() => {
+  const root = document.documentElement;
 
-  /* ---------- Theme toggle ---------- */
-  var root = document.documentElement;
-  var toggle = document.getElementById("theme-toggle");
-  var STORAGE_KEY = "tg-theme";
-
-  function getStoredTheme() {
+  // theme
+  document.getElementById('theme')?.addEventListener('click', () => {
+    const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    root.dataset.theme = next;
     try {
-      return localStorage.getItem(STORAGE_KEY);
-    } catch (e) {
-      return null;
+      localStorage.setItem('theme', next);
+    } catch {
+      /* private mode */
     }
-  }
+  });
 
-  function setStoredTheme(value) {
-    try {
-      localStorage.setItem(STORAGE_KEY, value);
-    } catch (e) {
-      /* private mode / storage blocked: ignore */
+  // mobile nav
+  const nav = document.getElementById('nav');
+  const navToggle = document.getElementById('nav-toggle');
+  navToggle?.addEventListener('click', () => {
+    const open = nav.classList.toggle('is-open');
+    navToggle.setAttribute('aria-expanded', String(open));
+  });
+  nav?.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') {
+      nav.classList.remove('is-open');
+      navToggle?.setAttribute('aria-expanded', 'false');
     }
-  }
+  });
 
-  function systemPrefersDark() {
-    return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-  }
+  // header hairline once scrolled
+  const header = document.querySelector('.site-header');
+  const onScroll = () => header?.classList.toggle('is-stuck', window.scrollY > 8);
+  onScroll();
+  addEventListener('scroll', onScroll, { passive: true });
 
-  function applyTheme(theme) {
-    if (theme === "light" || theme === "dark") {
-      root.setAttribute("data-theme", theme);
-    } else {
-      root.removeAttribute("data-theme");
-    }
-  }
-
-  var stored = getStoredTheme();
-  if (stored) applyTheme(stored);
-
-  if (toggle) {
-    toggle.addEventListener("click", function () {
-      var current = root.getAttribute("data-theme") || (systemPrefersDark() ? "dark" : "light");
-      var next = current === "dark" ? "light" : "dark";
-      applyTheme(next);
-      setStoredTheme(next);
-      toggle.setAttribute("aria-pressed", String(next === "dark"));
-    });
-  }
-
-  /* ---------- Mobile nav ---------- */
-  var navToggle = document.getElementById("nav-toggle");
-  var navLinks = document.getElementById("nav-links");
-
-  if (navToggle && navLinks) {
-    navToggle.addEventListener("click", function () {
-      var isOpen = navLinks.classList.toggle("is-open");
-      navToggle.setAttribute("aria-expanded", String(isOpen));
-    });
-
-    navLinks.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        navLinks.classList.remove("is-open");
-        navToggle.setAttribute("aria-expanded", "false");
-      });
-    });
-  }
-
-  /* ---------- Project filters ---------- */
-  var filterButtons = document.querySelectorAll(".filter-btn");
-  var projectCards = document.querySelectorAll(".project-card");
-
-  filterButtons.forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      filterButtons.forEach(function (b) { b.setAttribute("aria-pressed", "false"); });
-      btn.setAttribute("aria-pressed", "true");
-      var filter = btn.getAttribute("data-filter");
-      projectCards.forEach(function (card) {
-        var tags = (card.getAttribute("data-tags") || "").split(" ");
-        var show = filter === "all" || tags.indexOf(filter) !== -1;
-        card.style.display = show ? "" : "none";
+  // project filters
+  const grid = document.getElementById('projects-grid');
+  document.querySelectorAll('.filter').forEach((button) => {
+    button.addEventListener('click', () => {
+      const tag = button.dataset.filter;
+      document.querySelectorAll('.filter').forEach((b) => b.setAttribute('aria-pressed', String(b === button)));
+      grid?.querySelectorAll('.project').forEach((card) => {
+        const tags = (card.dataset.tags || '').split(',');
+        card.style.display = tag === 'All' || tags.includes(tag) ? '' : 'none';
       });
     });
   });
 
-  /* ---------- Reveal on scroll ---------- */
-  var revealEls = document.querySelectorAll(".reveal");
-  var prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  if (prefersReducedMotion || !("IntersectionObserver" in window)) {
-    revealEls.forEach(function (el) { el.classList.add("is-visible"); });
-  } else {
-    var observer = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+  // reveal on scroll; anything still hidden after 1.2s is shown anyway (printing, no scroll, odd browsers)
+  const hidden = [...document.querySelectorAll('[data-reveal]')];
+  const show = (el) => el.classList.add('is-visible');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(
+      (entries) => entries.forEach((entry) => entry.isIntersecting && (show(entry.target), io.unobserve(entry.target))),
+      { rootMargin: '0px 0px -8% 0px' },
     );
-    revealEls.forEach(function (el) { observer.observe(el); });
-
-    /* Safety net: content must never stay permanently invisible if a
-       scroll/intersection event never fires (e.g. full-page screenshot
-       tools that render beyond the viewport without scrolling, or a
-       visitor who never scrolls). Reveal anything still hidden shortly
-       after load so the page degrades gracefully. */
-    window.setTimeout(function () {
-      revealEls.forEach(function (el) { el.classList.add("is-visible"); });
-      observer.disconnect();
-    }, 1500);
+    hidden.forEach((el) => io.observe(el));
+    setTimeout(() => hidden.forEach(show), 1200);
+  } else {
+    hidden.forEach(show);
   }
 
-  /* ---------- Footer year ---------- */
-  var yearEl = document.getElementById("year");
-  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+  // highlight the section you're in
+  const links = [...document.querySelectorAll('.nav a')];
+  const sections = links.map((a) => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  if ('IntersectionObserver' in window && sections.length) {
+    const spy = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          links.forEach((a) => a.classList.toggle('is-active', a.getAttribute('href') === `#${entry.target.id}`));
+        });
+      },
+      { rootMargin: '-45% 0px -50% 0px' },
+    );
+    sections.forEach((s) => spy.observe(s));
+  }
 })();

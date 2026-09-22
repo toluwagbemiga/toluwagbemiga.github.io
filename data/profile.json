@@ -1,0 +1,487 @@
+{
+ "name": "Tolulope Gbenga",
+ "headline": "Software Engineer — Android & Blockchain",
+ "contact": {
+  "email": "tolulopeoluwagbemiga06@gmail.com",
+  "location": "Yaba, Lagos",
+  "linkedin": "https://www.linkedin.com/in/gbenga-tolulope",
+  "github": "https://www.github.com/toluwagbemiga",
+  "website": ""
+ },
+ "summary": "Android Software Engineer at ALAT (Wema Bank's digital banking app, 2M+ users) with 2+ years shipping production Kotlin and Jetpack Compose features within a 200+ engineer organization. Built the Wema Agent app end-to-end from scaffolding through pilot, and contributed to migrating ALAT's core app from XML Views to Compose. Parallel background in full-stack web (Laravel, Next.js) and Solidity smart contract development and security auditing.",
+ "skills": [
+  {
+   "category": "AI & Machine Learning",
+   "items": [
+    "LLM application development (Qwen, Claude)",
+    "Model routing and cost optimisation",
+    "RAG and LLM orchestration",
+    "Fraud detection modelling",
+    "scikit-learn",
+    "Random Forest",
+    "Fine-tuning small open-source models with LoRA (Hugging Face; currently learning)"
+   ]
+  },
+  {
+   "category": "Programming Languages",
+   "items": [
+    "Kotlin",
+    "Solidity",
+    "PHP",
+    "Python",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "SQL",
+    "TypeScript",
+    "Go",
+    "Dart"
+   ]
+  },
+  {
+   "category": "Mobile Development",
+   "items": [
+    "Android",
+    "Jetpack Compose",
+    "KMP (Kotlin Multiplatform Mobile)",
+    "Coroutines",
+    "Hilt",
+    "Flutter",
+    "Room",
+    "Retrofit",
+    "Clean Architecture / MVVM"
+   ]
+  },
+  {
+   "category": "Blockchain & Web3",
+   "items": [
+    "Smart Contract Development & Auditing (Solidity, Mythril)",
+    "DApp Integration",
+    "Independent Blockchain Bug Bounty Hunting"
+   ]
+  },
+  {
+   "category": "Web & Backend",
+   "items": [
+    "Next.js",
+    "Laravel",
+    "FastAPI",
+    "RESTful APIs",
+    "gRPC",
+    "Web Security Best Practices",
+    "NestJS",
+    "Django REST Framework",
+    "Node.js",
+    "FilamentPHP",
+    "GraphQL",
+    "Microservices"
+   ]
+  },
+  {
+   "category": "AI & DevOps Tools",
+   "items": [
+    "AI-Assisted Architecture (Claude Code CLI, LLM workflows)",
+    "Git/GitHub",
+    "Docker",
+    "Kubernetes"
+   ]
+  },
+  {
+   "category": "Databases",
+   "items": [
+    "PostgreSQL",
+    "MySQL",
+    "SQLite",
+    "MongoDB",
+    "Redis",
+    "Room"
+   ]
+  },
+  {
+   "category": "Other Tools & Platforms",
+   "items": [
+    "Microsoft Office Suite",
+    "Google Workspace"
+   ]
+  },
+  {
+   "category": "Frontend",
+   "items": [
+    "Next.js",
+    "React",
+    "Streamlit",
+    "TypeScript",
+    "Vue.js",
+    "Tailwind CSS"
+   ]
+  },
+  {
+   "category": "WordPress",
+   "items": [
+    "WordPress",
+    "Elementor Pro",
+    "Astra",
+    "Custom plugins and themes"
+   ]
+  }
+ ],
+ "experience": [
+  {
+   "title": "Relationship Manager",
+   "company": "First Bank Nigeria",
+   "location": "",
+   "start": "Aug 2025",
+   "end": "Present",
+   "highlights": [
+    "Collaborated closely with the Team Lead to ensure seamless operations within the sales and relationship management team, fostering strong team dynamics and enhancing service delivery, which led to increased client satisfaction and loyalty among affluent customers.",
+    "Analyzed client feedback and sales metrics to identify areas for improvement, supporting strategic decisions that enhance sales effectiveness and client engagement.",
+    "Participated in cross-departmental initiatives to promote collaboration and streamline processes, contributing to greater operational efficiency and a unified approach to client relationship management.",
+    "Assisted in developing engagement strategies tailored to affluent clients, aligned with organizational objectives, which increased client retention and positively impacted overall profitability."
+   ],
+   "alt_titles": []
+  },
+  {
+   "title": "Software Engineer (Android & Blockchain)",
+   "company": "ALAT (Nigerian Financial Institution)",
+   "location": "Hybrid",
+   "start": "Nov 2024",
+   "end": "Present",
+   "highlights": [
+    "Built the Wema Agent mobile app end-to-end — from project scaffolding through pilot phase — using Kotlin, Jetpack Compose, and Hilt, within a 200+ engineer organization.",
+    "Shipped the authentication feature for ALAT's core banking app, used by over 2 million users.",
+    "Contributed to migrating ALAT's legacy 1.0 codebase from XML/View-based UI to Kotlin and Jetpack Compose.",
+    "Accelerated delivery by embedding AI-assisted development tools, including Claude Code CLI, into daily workflows for codebase structuring and complex problem-solving.",
+    "Collaborated with cross-functional teams to design and integrate RESTful and gRPC APIs between mobile clients and backend microservices.",
+    "Optimization of existing software and addition of new features to existing software.",
+    "Conduct unit testing to ensure the robustness and quality of the applications.",
+    "Troubleshoot, debug, and resolve technical issues in a timely manner.",
+    "Ensure the security and performance of mobile applications by contributing to code reviews and technical documentation.",
+    "Participate in agile development methodologies such as SCRUM to improve the development process."
+   ],
+   "alt_titles": [
+    "QA Engineer"
+   ]
+  },
+  {
+   "title": "Founder & Lead Developer",
+   "company": "Artix Solutions (registered web development agency)",
+   "location": "Lagos, Nigeria",
+   "start": "2021",
+   "end": "Present",
+   "highlights": [
+    "Founded and run a registered web development agency, handling client acquisition, scoping, delivery and support.",
+    "Delivered WordPress sites with custom themes and plugins for clients including Fort Kovant Legal Practitioners, TheAcemanplus Ventures and the Olusegun Fadare Foundation.",
+    "Built custom client platforms in Laravel, including immigration case-management systems with client portals and role-based admin panels.",
+    "Built an internal Python lead-generation and outreach automation tool for the agency."
+   ],
+   "alt_titles": []
+  },
+  {
+   "title": "Software Engineer",
+   "company": "Givitec Software Company",
+   "location": "",
+   "start": "Jan 2024",
+   "end": "Nov 2024",
+   "highlights": [
+    "Engineered and maintained full-stack web solutions using Laravel, Next.js, and modern JavaScript, delivering functional, performant interfaces for client platforms.",
+    "Conducted smart contract security audits using Mythril for enterprise clients (findings confidential under NDA).",
+    "Developed a secure lawyer directory platform for Edo State with role-based access control and advanced search, driving a 25% increase in user engagement.",
+    "Orchestrated deployment of production platforms, optimizing server configuration and SEO.",
+    "Designed, developed, and maintained web applications using technologies such as HTML, CSS, JavaScript, Laravel, and WordPress, ensuring high functionality and performance.",
+    "Collaborated with cross-functional teams—including designers, project managers, and clients—to translate requirements into technical specifications and deliver comprehensive web solutions.",
+    "Established a WordPress news blog from inception, focusing on user-friendly design, efficient content management, and SEO optimization to enhance online visibility.",
+    "Ensured code quality through rigorous unit and integration testing, while adhering to industry best practices and standards.",
+    "Facilitated regular code reviews and participated in knowledge-sharing sessions to promote team learning and development.",
+    "Successfully launched several websites, including https://www.smemediangr.com, https://www.onegheselefoundation.com, https://www.nbaedostate.com, and https://www.spartapp.ng."
+   ],
+   "alt_titles": []
+  },
+  {
+   "title": "Lead Full-Stack Developer",
+   "company": "Songuyo Shopping",
+   "location": "",
+   "start": "Jan 2023",
+   "end": "Jan 2024",
+   "highlights": [
+    "Directed the full lifecycle development of a high-volume e-commerce platform, ensuring seamless integration between complex back-end logic and responsive front-end interfaces.",
+    "Architected a highly scalable backend infrastructure using Laravel, optimizing database queries and server resources to successfully process up to 300,000 daily requests.",
+    "Designed engaging and accessible user interfaces using Laravel Blade, Bootstrap 4, and JavaScript, directly increasing customer retention and conversion rates.",
+    "Spearheaded the development of the Songuyo e-commerce platform, overseeing both front-end and back-end functionalities to ensure seamless integration and performance.",
+    "Back-end Development: Engineered a robust back-end framework using Laravel, enhancing platform reliability and scalability to efficiently accommodate high traffic volumes.",
+    "Front-end Development: Designed and implemented an engaging user interface utilizing Laravel Blade, HTML, Bootstrap 4, CSS, and JavaScript, significantly improving user experience and boosting customer engagement and conversion rates.",
+    "Played a pivotal role in the successful launch of the platform, which is capable of processing 300,000 requests daily, directly impacting organizational performance by enabling operational scalability and meeting customer demands.",
+    "Contributed to establishing Songuyo as a competitive entity in the e-commerce sector, laying a strong foundation for future growth and increased revenue potential through strategic development initiatives."
+   ],
+   "alt_titles": []
+  },
+  {
+   "title": "IT Intern",
+   "company": "Federal University of Technology, Akure, Digital Research and Resource Sharing Center",
+   "location": "",
+   "start": "Mar 2021",
+   "end": "Aug 2021",
+   "highlights": [
+    "Administered and maintained mission-critical software and database systems supporting over 2,000 students, guaranteeing zero downtime during exam administration periods.",
+    "Diagnosed, resolved, and optimized network infrastructure and hardware configurations across a 400-node computer network to maximize operational efficiency.",
+    "Managed the software and database systems for exam administration, impacting over 2,000 students and ensuring accurate and timely assessment processes.",
+    "Provided technical and hardware support, which significantly enhanced exam quality, leading to increased student satisfaction and improved overall exam results.",
+    "Integrated and connected over 400 computer systems, resulting in enhanced performance and operational efficiency across the organization.",
+    "Diagnosed and resolved network component malfunctions, ensuring uninterrupted operations and maintaining high standards of service delivery."
+   ],
+   "alt_titles": []
+  },
+  {
+   "title": "Full Stack Developer (Freelance)",
+   "company": "Shuraka Investment",
+   "location": "",
+   "start": "2021",
+   "end": "2021",
+   "highlights": [
+    "Conceptualized and developed Shuraka Investment, a short-term investment platform that allowed users to own stakes in real estate ventures and receive a fixed Return on Investment (ROI).",
+    "Leveraged HTML, CSS, JavaScript, and PHP to create the platform, ensuring an intuitive user interface and secure financial transactions.",
+    "Managed the end-to-end project lifecycle, from initial planning to successful deployment.",
+    "Collaborated closely with clients to understand their vision and requirements, resulting in a tailored solution.",
+    "Despite its discontinuation, Shuraka Investment showcased my proficiency in web development and my ability to design and execute complex financial projects."
+   ],
+   "alt_titles": []
+  },
+  {
+   "title": "Full Stack Developer (Freelance)",
+   "company": "FundtheWxlves",
+   "location": "",
+   "start": "2020",
+   "end": "2020",
+   "highlights": [
+    "Developed FundtheWxlves, a crowdfunding platform designed for clients to enable individuals to invest in EC77 Clothing and receive a Return on Investment (ROI).",
+    "Utilized a technology stack comprising HTML, CSS, JavaScript, and PHP to craft the website, prioritizing user engagement and financial security.",
+    "Led project planning, design, and execution, aligning the platform with the client's vision.",
+    "Managed project resources efficiently and maintained close collaboration with the EC77 Clothing team.",
+    "While the platform is no longer operational, this project emphasized my web development and project management skills in a client-focused context."
+   ],
+   "alt_titles": []
+  }
+ ],
+ "education": [
+  {
+   "degree": "Bachelor of Science",
+   "field": "Computer Science",
+   "institution": "Adekunle Ajasin University",
+   "start": "",
+   "end": "",
+   "details": ""
+  }
+ ],
+ "certifications": [
+  "Kubernetes and Cloud Native Associate (KCNA) — CNCF (exam scheduled, Sep 2026)",
+  "Introduction to Linux (LF101 / LFS101) — The Linux Foundation, Aug 2026",
+  "Introduction to Kubernetes (LF158 / LFS158) — The Linux Foundation, Aug 2026",
+  "Kubernetes and Cloud Native Essentials (LF250 / LFS250) — The Linux Foundation, Aug 2026",
+  "Introduction to Cybersecurity — Cisco Networking Academy, Jan 2025",
+  "Network Technician Career Path — Cisco Networking Academy, Jan 2025",
+  "Full-Stack Web Development Bootcamp — Udemy, 2024"
+ ],
+ "achievements": [
+  "Completed the National Youth Service Corps (NYSC) service year, Jan–Nov 2024, as a software engineer at Givitec Software Company"
+ ],
+ "languages": [
+  "English(fluent)"
+ ],
+ "suggested_roles": [
+  "Android Software Engineer",
+  "Full-Stack Developer",
+  "Blockchain Developer",
+  "Smart Contract Auditor",
+  "Mobile Application Developer",
+  "Web Developer"
+ ],
+ "years_experience": 3.5,
+ "public_projects": [
+  {
+   "name": "Songuyo E-commerce Platform",
+   "url": "https://www.songuyo.com",
+   "description": "High-volume e-commerce platform capable of processing 300,000 requests daily.",
+   "highlights": [
+    "Led full-stack development using Laravel (backend) and Laravel Blade, Bootstrap 4, CSS, JavaScript (frontend).",
+    "Improved user experience and conversion rates through responsive UI design.",
+    "Scaled backend infrastructure to handle high traffic loads reliably."
+   ]
+  },
+  {
+   "name": "Edo State Lawyer Directory",
+   "url": "https://www.nbaedostate.com",
+   "description": "Secure lawyer directory with user registration, profile management, and advanced search.",
+   "highlights": [
+    "Incorporated role-based access control and secure authentication.",
+    "Resulted in a 25% increase in user engagement.",
+    "Optimized for SEO and performance."
+   ]
+  },
+  {
+   "name": "SMEMediaNGR",
+   "url": "https://www.smemediangr.com",
+   "description": "WordPress-based news blog focused on user-friendly design and content management.",
+   "highlights": [
+    "Built from inception with SEO optimization.",
+    "Efficient content management system for editorial team."
+   ]
+  },
+  {
+   "name": "One Ghesele Foundation",
+   "url": "https://www.onegheselefoundation.com",
+   "description": "Nonprofit organization website.",
+   "highlights": [
+    "Delivered as part of client web solutions portfolio."
+   ]
+  },
+  {
+   "name": "SpartApp",
+   "url": "https://www.spartapp.ng",
+   "description": "Web application developed for client.",
+   "highlights": [
+    "Part of multiple successfully launched websites during tenure at Givitec."
+   ]
+  },
+  {
+   "name": "Olusegun Fadare foundation",
+   "url": "https://olusegunfadarefoundation.org",
+   "description": "An Ngo foundation ",
+   "highlights": [
+    "Used wordpress",
+    "Custom plugin",
+    "custom theme"
+   ]
+  },
+  {
+   "name": "The Aceman plus",
+   "url": "https://theacemanplus.com",
+   "description": "Website for TheAcemanplus Ventures, a brand strategy consultancy in Abuja.",
+   "highlights": [
+    "WordPress with an Astra child theme, Elementor Pro and custom acp-* plugins; delivered through Artix Solutions.",
+    "Documented architecture and MVP build plan; reproducible dev environment in GitHub Codespaces with bootstrap scripts."
+   ]
+  },
+  {
+   "name": "Digital Twin: cost-aware memory agent (Qwen Hackathon)",
+   "url": "https://github.com/toluwagbemiga/digital-twin",
+   "description": "A permission-aware memory agent built on Qwen that reconstructs what you're working on across GitHub, Slack, calendar and files.",
+   "highlights": [
+    "Routes each task to the cheapest capable Qwen model: a cheap classifier emits a structured descriptor and a deterministic, auditable policy maps it to a model tier.",
+    "The classifier chose the right tier on 10/10 of a fixed question set; routing cost 80% of always using qwen-max at equal correctness, with a written benchmark explaining where the savings do and don't come from.",
+    "Enforces who may recall what: scoped principals, source-filtered queries, and graph traversal that can't bypass access rules."
+   ]
+  },
+  {
+   "name": "Credit Card Fraud Detection Model",
+   "url": "",
+   "description": "A machine-learning classifier that flags fraudulent credit card transactions.",
+   "highlights": [
+    "Trained a Random Forest classifier on synthetic credit card transaction data produced with an online data generator."
+   ]
+  },
+  {
+   "name": "NexaCampus: school management suite for Betalean (in progress)",
+   "url": "",
+   "description": "An all-in-one, multi-tenant school management SaaS for Betalean, covering daycare and nursery through primary and secondary schools.",
+   "highlights": [
+    "Every feature is a subscribable module, so each school pays only for what it uses (student information, academics, accounting, notifications and more).",
+    "Cloud-native microservices architecture for independent deployment, failure isolation and horizontal scaling, with role-based access control.",
+    "Native Android client in Kotlin and Jetpack Compose alongside the web platform."
+   ]
+  },
+  {
+   "name": "Bivio: POS-integrated financial management app",
+   "url": "https://github.com/toluwagbemiga/bivio",
+   "description": "Capstone project: a POS system with AI features for low-income borrowers and micro-lenders in Nigeria.",
+   "highlights": [
+    "Django REST Framework backend with PostgreSQL and Redis; Flutter mobile app; offline-first Vue.js PWA.",
+    "FastAPI + scikit-learn service for AI-powered transaction and product categorisation.",
+    "Inventory, loan repayment tracking and automated micro-savings; containerised with Docker and Nginx."
+   ]
+  },
+  {
+   "name": "AfriPay: Android banking app",
+   "url": "https://github.com/toluwagbemiga/AfriPay",
+   "description": "A modern Android banking app built with Jetpack Compose.",
+   "highlights": [
+    "Clean Architecture + MVVM with Hilt (KSP), StateFlow and sealed UI states.",
+    "Offline-first with Room and DataStore; Retrofit + OkHttp with Kotlin Serialization.",
+    "Sign-up, login and OTP verification, country selection and KYC onboarding, animated Navigation Compose flows."
+   ]
+  },
+  {
+   "name": "Kiroween: microservices SaaS platform",
+   "url": "https://github.com/toluwagbemiga/kiroween",
+   "description": "A production-grade, microservices-based SaaS starter built with Go and Next.js.",
+   "highlights": [
+    "Go microservices over gRPC: auth with RBAC, Stripe subscription billing, an LLM gateway with prompt-as-code, Socket.IO notifications, analytics and Unleash feature flags.",
+    "Next.js 14 + TypeScript frontend through a GraphQL API gateway, built to WCAG 2.1 AA.",
+    "Docusaurus docs generated from OpenAPI specs, Docker Compose demo environment, GitHub Actions CI/CD."
+   ]
+  },
+  {
+   "name": "PayCircle: on-chain split payments",
+   "url": "https://github.com/toluwagbemiga/paycircle",
+   "description": "Split a crypto payment with a group through a shareable link, with no backend.",
+   "highlights": [
+    "Solidity smart contract deployed on Ethereum Sepolia; each participant pays their share from their own wallet.",
+    "Funds release to the creator automatically when the last share is paid.",
+    "Next.js + TypeScript front end with wallet connection."
+   ]
+  },
+  {
+   "name": "Email Marketing Platform (Laravel + NestJS + React)",
+   "url": "https://github.com/toluwagbemiga/email-marketing-platform",
+   "description": "The same email marketing platform built with two interchangeable backends and one React dashboard.",
+   "highlights": [
+    "Laravel and NestJS REST APIs with SendGrid, queue processing (Bull on NestJS) and JWT auth.",
+    "Campaign, subscriber and template management with bulk sending; React + TypeScript + Tailwind dashboard."
+   ]
+  },
+  {
+   "name": "Digital Marketplace API",
+   "url": "https://github.com/toluwagbemiga/digital-marketplace-api",
+   "description": "Production-grade Laravel API where creators sell digital products to customers.",
+   "highlights": [
+    "Role-based auth (creator/customer), secure file downloads and queued processing.",
+    "Service and repository layers, event-driven design, form-request validation and a test suite; one-command Docker setup."
+   ]
+  },
+  {
+   "name": "URL Shortener Platform (Laravel + NestJS + React)",
+   "url": "https://github.com/toluwagbemiga/url-shortener-platform",
+   "description": "URL shortener with Laravel and NestJS backends behind one React front end, built to compare the two stacks.",
+   "highlights": [
+    "REST APIs with validation and tests, click analytics, SQLite storage, responsive React + TypeScript UI."
+   ]
+  },
+  {
+   "name": "Bagisto Paystack payment gateway",
+   "url": "https://github.com/toluwagbemiga/bagisto-paystack",
+   "description": "Open-source package that adds Paystack payments to Bagisto v2 (Laravel e-commerce).",
+   "highlights": []
+  },
+  {
+   "name": "Fort Kovant Legal Practitioners website",
+   "url": "https://fortkovant.com",
+   "description": "Website for a Lagos law firm specialising in financial-crime defence, real estate and fund recovery.",
+   "highlights": [
+    "WordPress with the Astra theme; WhatsApp consultation and contact flows; delivered through Artix Solutions."
+   ]
+  }
+ ],
+ "private_projects_summary": "Also builds private client platforms (immigration case management, ESG compliance SaaS, creator monetization) that can't be shown publicly.",
+ "open_to": {
+  "roles": [
+   "Android Software Engineer",
+   "Full-Stack Developer",
+   "Blockchain Developer",
+   "Smart Contract Auditor",
+   "Mobile Application Developer",
+   "Web Developer",
+   "Wordpress Developer",
+   "PHP backend developer"
+  ],
+  "arrangements": "Hybrid or remote in Lagos, Nigeria; remote worldwide",
+  "status": "Open to new roles"
+ }
+}

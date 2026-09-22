@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ p.name }} — {{ p.headline }}</title>
+<meta name="description" content="{{ meta_description }}">
+<link rel="canonical" href="{{ site }}/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="{{ p.name }} — {{ p.headline }}">
+<meta property="og:description" content="{{ meta_description }}">
+<meta property="og:url" content="{{ site }}/">
+<meta property="og:image" content="{{ site }}/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<script>
+  // set the theme before paint so there is no flash, and enable scroll reveals only when JS runs
+  (() => {
+    const saved = localStorage.getItem('theme');
+    const dark = saved ? saved === 'dark' : !window.matchMedia('(prefers-color-scheme: light)').matches;
+    document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+    document.documentElement.classList.add('js');
+  })();
+</script>
+<script type="application/ld+json">
+{{ json_ld }}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="mark">TG</span> {{ p.name }}</a>
+    <nav class="nav" id="nav" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn" href="assets/{{ cv_file }}" download>CV</a>
+      <button class="icon-btn" id="theme" type="button" aria-label="Switch theme" title="Switch theme">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+      </button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="status"><span class="dot"></span>{{ p.open_to.status }} · {{ p.open_to.arrangements }}</span>
+      <h1>{{ p.name }}</h1>
+      <p class="role">{{ p.headline }}</p>
+      <p class="intro">{{ intro }}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="mailto:{{ p.contact.email }}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          Email me
+        </a>
+        <a class="btn" href="{{ p.contact.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="{{ p.contact.github }}" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="assets/{{ cv_file }}" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 4v11m0 0 4-4m-4 4-4-4M5 19h14"/></svg>
+          Download CV
+        </a>
+      </div>
+    </div>
+    <aside class="card-facts" data-reveal>
+      <dl>
+        <div class="row"><dt>Based in</dt><dd>{{ p.contact.location }}</dd></div>
+        <div class="row"><dt>Experience</dt><dd>{{ p.years_experience }} years, currently at {{ current_company }}</dd></div>
+        <div class="row"><dt>Focus</dt><dd>{{ focus }}</dd></div>
+        <div class="row"><dt>Core stack</dt><dd class="stack">{% for s in core_stack %}<span class="chip">{{ s }}</span>{% endfor %}</dd></div>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head"><span class="num">01</span><h2>About</h2></div>
+    <div class="about" data-reveal>
+      <div>{% for para in about %}<p>{{ para }}</p>{% endfor %}</div>
+      <div class="about-stats">
+        {% for stat in stats %}<div class="stat"><b>{{ stat.value }}</b><span>{{ stat.label }}</span></div>{% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="section-head"><span class="num">02</span><h2>What I work with</h2>
+      <p class="lede">Grouped by area. Everything here is in daily or recent use.</p>
+    </div>
+    <div data-reveal>
+      {% for group in p.skills %}
+      <div class="skill-group">
+        <h3>{{ group.category }}</h3>
+        <div class="chips">{% for item in group['items'] %}<span class="chip">{{ item }}</span>{% endfor %}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head"><span class="num">03</span><h2>Experience</h2></div>
+    <div class="timeline" data-reveal>
+      {% for job in experience %}
+      <article class="job">
+        <div class="job-head">
+          <h3>{{ job.title }}</h3>
+          <span class="org">{{ job.company }}</span>
+          <span class="when">{{ job.start }} – {{ job.end }}</span>
+        </div>
+        <ul>{% for h in job.highlights %}<li>{{ h }}</li>{% endfor %}</ul>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head"><span class="num">04</span><h2>Things I've built</h2>
+      <p class="lede">Side projects, client platforms and open source.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filter projects">
+      {% for tag in tags %}<button class="filter" type="button" data-filter="{{ tag }}" aria-pressed="{{ 'true' if loop.first else 'false' }}">{{ tag }}</button>{% endfor %}
+    </div>
+    <div class="projects" id="projects-grid" data-reveal>
+      {% for project in projects %}
+      <article class="project{% if project.featured %} is-featured{% endif %}" data-tags="{{ project.tags | join(',') }}">
+        <span class="kind">{{ project.tags[0] }}</span>
+        <h3>{{ project.name }}</h3>
+        {% if project.description %}<p>{{ project.description }}</p>{% endif %}
+        {% if project.highlights %}<ul>{% for h in project.highlights[:3] %}<li>{{ h }}</li>{% endfor %}</ul>{% endif %}
+        {% if project.url %}
+        <a class="link" href="{{ project.url }}" target="_blank" rel="noopener">View project <span aria-hidden="true">→</span></a>
+        {% else %}
+        <span class="muted">Private / no public link</span>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+    <p class="note">{{ p.private_projects_summary }}</p>
+  </div>
+</section>
+
+<section id="credentials">
+  <div class="wrap">
+    <div class="section-head"><span class="num">05</span><h2>Credentials</h2></div>
+    <div class="two-col" data-reveal>
+      <div>
+        <h3>Certifications</h3>
+        {% for cert in certifications %}
+        <div class="cred">
+          <span class="name">{{ cert.name }}</span>
+          {% if cert.scheduled %}<span class="pill pill-amber">Exam scheduled</span>{% endif %}
+          <span class="meta">{{ cert.meta }}</span>
+        </div>
+        {% endfor %}
+      </div>
+      <div>
+        <h3>Education</h3>
+        {% for ed in p.education %}
+        <div class="cred">
+          <span class="name">{{ ed.degree }}{% if ed.field %}, {{ ed.field }}{% endif %}</span>
+          <span class="meta">{{ ed.institution }}</span>
+        </div>
+        {% endfor %}
+        {% if p.achievements %}
+        <h3 style="margin-top:1.6rem">Also</h3>
+        {% for a in p.achievements %}<div class="cred"><span class="name">{{ a }}</span></div>{% endfor %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-panel" data-reveal>
+      <h2>Let's talk</h2>
+      <p>{{ p.open_to.status }} — {{ p.open_to.arrangements }}. Happy to talk about {{ open_roles }}.</p>
+      <div class="contact-actions">
+        <a class="btn btn-primary" href="mailto:{{ p.contact.email }}">{{ p.contact.email }}</a>
+        <a class="btn" href="{{ p.contact.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="{{ p.contact.github }}" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="assets/{{ cv_file }}" download>Download CV</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© {{ year }} {{ p.name }}</span>
+    <span>{{ p.contact.location }} · <a href="mailto:{{ p.contact.email }}">{{ p.contact.email }}</a></span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
