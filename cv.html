@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tolulope Gbenga — CV</title>
+<meta name="robots" content="noindex" />
+<style>
+  :root {
+    --ink: #16191a;
+    --muted: #545c5e;
+    --accent: #0f6e64;
+    --line: #d9dcd8;
+    --bg-soft: #f4f5f3;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--ink);
+    font-size: 9.3pt;
+    line-height: 1.32;
+    background: #fff;
+  }
+  .page {
+    max-width: 190mm;
+    margin: 6mm auto;
+    padding: 0 6mm;
+  }
+  header.cv-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    border-bottom: 2.25px solid var(--accent);
+    padding-bottom: 6px;
+    margin-bottom: 8px;
+  }
+  .cv-head h1 { margin: 0 0 1px; font-size: 17.5pt; letter-spacing: -0.01em; }
+  .cv-head .role { margin: 0 0 3px; color: var(--accent); font-weight: 700; font-size: 10.2pt; }
+  .contact-line { margin: 0 0 8px; color: var(--muted); font-size: 8.4pt; }
+  .contact-line a { color: var(--muted); text-decoration: none; }
+  .contact-line span::after { content: " \00b7 "; color: var(--line); }
+  .contact-line span:last-child::after { content: ""; }
+
+  section { margin-bottom: 8px; }
+  section:last-child { margin-bottom: 0; }
+  h2.section-title {
+    font-size: 8.8pt;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 2px;
+    margin: 0 0 5px;
+  }
+  p.summary { margin: 0; color: var(--ink); }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px 18px;
+  }
+  .skill-row { font-size: 8.5pt; margin: 0 0 1px; }
+  .skill-row b { font-weight: 700; }
+
+  .job { margin-bottom: 6px; page-break-inside: avoid; }
+  .job:last-child { margin-bottom: 0; }
+  .job-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .job-head .title { font-weight: 700; font-size: 9.4pt; }
+  .job-head .dates { font-size: 8.3pt; color: var(--muted); white-space: nowrap; font-weight: 600; }
+  .job-company { font-size: 8.6pt; color: var(--muted); margin: 0 0 2px; font-style: italic; }
+  .job ul { margin: 0; padding-left: 13px; }
+  .job li { margin-bottom: 0.5px; }
+
+  .proj-list { display: grid; gap: 3px; }
+  .proj { font-size: 8.5pt; }
+  .proj b { font-weight: 700; }
+  .proj .url { color: var(--muted); font-size: 7.8pt; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  ul.simple { margin: 0; padding-left: 13px; }
+  ul.simple li { margin-bottom: 2px; font-size: 8.5pt; }
+  .cert-note { color: #8a5b00; font-weight: 700; }
+
+  @media print {
+    body { font-size: 9pt; }
+    .page { margin: 0; padding: 0 3mm; max-width: none; }
+    @page { size: A4; margin: 9mm 12mm; }
+    a { color: inherit !important; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="cv-head">
+    <div>
+      <h1>Tolulope Gbenga</h1>
+      <p class="role">Software Engineer — Android &amp; Blockchain</p>
+    </div>
+  </header>
+  <p class="contact-line">
+    <span>Yaba, Lagos, Nigeria</span>
+    <span><a href="mailto:tolulopeoluwagbemiga06@gmail.com">tolulopeoluwagbemiga06@gmail.com</a></span>
+    <span><a href="https://www.linkedin.com/in/gbenga-tolulope">linkedin.com/in/gbenga-tolulope</a></span>
+    <span><a href="https://www.github.com/toluwagbemiga">github.com/toluwagbemiga</a></span>
+  </p>
+
+  <section>
+    <h2 class="section-title">Summary</h2>
+    <p class="summary">Android Software Engineer at ALAT (Wema Bank's digital banking app, 2M+ users) with 2+ years shipping production Kotlin and Jetpack Compose features within a 200+ engineer organization. Built the Wema Agent app end-to-end from scaffolding through pilot, and contributed to migrating ALAT's core app from XML Views to Compose. Parallel background in full-stack web (Laravel, Next.js) and Solidity smart contract development and security auditing.</p>
+  </section>
+
+  <section>
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <p class="skill-row"><b>Languages:</b> Kotlin, Solidity, PHP, Python, JavaScript, TypeScript, Go, Dart, SQL, HTML, CSS</p>
+      <p class="skill-row"><b>Mobile:</b> Android, Jetpack Compose, KMP, Coroutines, Hilt, Flutter, Room, Retrofit, Clean Architecture / MVVM</p>
+      <p class="skill-row"><b>Web &amp; Backend:</b> Next.js, Laravel, FastAPI, NestJS, Django REST Framework, Node.js, RESTful APIs, gRPC, GraphQL, Microservices, FilamentPHP</p>
+      <p class="skill-row"><b>Blockchain &amp; Web3:</b> Smart Contract Development &amp; Auditing (Solidity, Mythril), DApp Integration, Bug Bounty Hunting</p>
+      <p class="skill-row"><b>AI &amp; ML:</b> LLM app development (Qwen, Claude), model routing/cost optimisation, RAG, fraud detection modelling, scikit-learn, Random Forest, LoRA fine-tuning (learning)</p>
+      <p class="skill-row"><b>Databases:</b> PostgreSQL, MySQL, SQLite, MongoDB, Redis, Room</p>
+      <p class="skill-row"><b>Frontend:</b> React, Next.js, Vue.js, TypeScript, Tailwind CSS, Streamlit</p>
+      <p class="skill-row"><b>DevOps &amp; Tools:</b> Git/GitHub, Docker, Kubernetes, Claude Code CLI</p>
+      <p class="skill-row"><b>WordPress:</b> WordPress, Elementor Pro, Astra, custom plugins &amp; themes</p>
+      <p class="skill-row"><b>Other:</b> Microsoft Office Suite, Google Workspace</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Experience</h2>
+
+    <div class="job">
+      <div class="job-head"><span class="title">Relationship Manager</span><span class="dates">Aug 2025 &ndash; Present</span></div>
+      <p class="job-company">First Bank Nigeria</p>
+      <ul>
+        <li>Collaborated with the Team Lead to ensure seamless sales and relationship management operations, increasing client satisfaction and loyalty among affluent customers.</li>
+        <li>Analyzed client feedback and sales metrics to support strategic decisions that enhance sales effectiveness and engagement.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><span class="title">Software Engineer (Android &amp; Blockchain)</span><span class="dates">Nov 2024 &ndash; Present</span></div>
+      <p class="job-company">ALAT (Nigerian Financial Institution) — Hybrid</p>
+      <ul>
+        <li>Built the Wema Agent mobile app end-to-end — scaffolding through pilot — using Kotlin, Jetpack Compose and Hilt, within a 200+ engineer organization.</li>
+        <li>Shipped the authentication feature for ALAT's core banking app, used by over 2 million users.</li>
+        <li>Contributed to migrating ALAT's legacy 1.0 codebase from XML/View-based UI to Kotlin and Jetpack Compose.</li>
+        <li>Accelerated delivery by embedding AI-assisted tools, including Claude Code CLI, into daily workflows.</li>
+        <li>Designed and integrated RESTful and gRPC APIs between mobile clients and backend microservices.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><span class="title">Founder &amp; Lead Developer</span><span class="dates">2021 &ndash; Present</span></div>
+      <p class="job-company">Artix Solutions (registered web development agency) — Lagos, Nigeria</p>
+      <ul>
+        <li>Founded and run a registered web development agency: client acquisition, scoping, delivery and support.</li>
+        <li>Delivered WordPress sites for clients including Fort Kovant Legal Practitioners, TheAcemanplus Ventures and the Olusegun Fadare Foundation.</li>
+        <li>Built custom client platforms in Laravel, including immigration case-management systems with client portals and role-based admin panels.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><span class="title">Software Engineer</span><span class="dates">Jan 2024 &ndash; Nov 2024</span></div>
+      <p class="job-company">Givitec Software Company</p>
+      <ul>
+        <li>Engineered full-stack web solutions using Laravel, Next.js and modern JavaScript for client platforms.</li>
+        <li>Conducted smart contract security audits using Mythril for enterprise clients (findings confidential under NDA).</li>
+        <li>Developed a secure lawyer directory platform for Edo State with RBAC and advanced search, driving a 25% increase in user engagement.</li>
+        <li>Launched several websites including smemediangr.com, onegheselefoundation.com, nbaedostate.com and spartapp.ng.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><span class="title">Lead Full-Stack Developer</span><span class="dates">Jan 2023 &ndash; Jan 2024</span></div>
+      <p class="job-company">Songuyo Shopping</p>
+      <ul>
+        <li>Directed full lifecycle development of a high-volume e-commerce platform.</li>
+        <li>Architected a scalable Laravel backend, optimizing queries and resources to process up to 300,000 daily requests.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><span class="title">IT Intern</span><span class="dates">Mar 2021 &ndash; Aug 2021</span></div>
+      <p class="job-company">Federal University of Technology, Akure — Digital Research and Resource Sharing Center</p>
+      <ul>
+        <li>Administered mission-critical software and database systems supporting over 2,000 students with zero downtime during exams.</li>
+        <li>Optimized network infrastructure and hardware across a 400-node computer network.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><span class="title">Full Stack Developer (Freelance)</span><span class="dates">2021</span></div>
+      <p class="job-company">Shuraka Investment</p>
+      <ul>
+        <li>Built a short-term real-estate investment platform (HTML, CSS, JavaScript, PHP); since discontinued.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><span class="title">Full Stack Developer (Freelance)</span><span class="dates">2020</span></div>
+      <p class="job-company">FundtheWxlves</p>
+      <ul>
+        <li>Built a crowdfunding platform for EC77 Clothing (HTML, CSS, JavaScript, PHP); no longer operational.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Selected Projects</h2>
+    <div class="proj-list">
+      <p class="proj"><b>Digital Twin (Qwen Hackathon)</b> — Permission-aware memory agent with cost-optimised model routing; classifier hit 10/10 on a fixed test set at 80% the cost of always using the top-tier model. <span class="url">github.com/toluwagbemiga/digital-twin</span></p>
+      <p class="proj"><b>Bivio</b> — POS-integrated financial management app for micro-lenders: Django REST Framework, Flutter, FastAPI + scikit-learn categorisation. <span class="url">github.com/toluwagbemiga/bivio</span></p>
+      <p class="proj"><b>AfriPay</b> — Android banking app: Jetpack Compose, Clean Architecture/MVVM, Hilt, Room, offline-first. <span class="url">github.com/toluwagbemiga/AfriPay</span></p>
+      <p class="proj"><b>Kiroween</b> — Microservices SaaS starter: Go + gRPC services, Next.js 14 + TypeScript frontend, WCAG 2.1 AA. <span class="url">github.com/toluwagbemiga/kiroween</span></p>
+      <p class="proj"><b>PayCircle</b> — On-chain split payments: Solidity contract on Ethereum Sepolia, Next.js frontend. <span class="url">github.com/toluwagbemiga/paycircle</span></p>
+      <p class="proj"><b>Songuyo E-commerce Platform</b> — High-volume Laravel platform processing 300,000 requests daily. <span class="url">songuyo.com</span></p>
+      <p class="proj"><b>Edo State Lawyer Directory</b> — Secure directory with RBAC; 25% increase in user engagement. <span class="url">nbaedostate.com</span></p>
+    </div>
+  </section>
+
+  <div class="two-col">
+    <section>
+      <h2 class="section-title">Certifications</h2>
+      <ul class="simple">
+        <li><span class="cert-note">Scheduled:</span> Kubernetes and Cloud Native Associate (KCNA) — CNCF, exam Sep 2026</li>
+        <li>Introduction to Linux (LF101/LFS101) — The Linux Foundation, Aug 2026</li>
+        <li>Introduction to Kubernetes (LF158/LFS158) — The Linux Foundation, Aug 2026</li>
+        <li>Kubernetes and Cloud Native Essentials (LF250/LFS250) — The Linux Foundation, Aug 2026</li>
+        <li>Introduction to Cybersecurity — Cisco Networking Academy, Jan 2025</li>
+        <li>Network Technician Career Path — Cisco Networking Academy, Jan 2025</li>
+        <li>Full-Stack Web Development Bootcamp — Udemy, 2024</li>
+      </ul>
+    </section>
+    <section>
+      <h2 class="section-title">Education</h2>
+      <ul class="simple">
+        <li><b>B.Sc. Computer Science</b> — Adekunle Ajasin University</li>
+      </ul>
+      <h2 class="section-title" style="margin-top:10px;">Achievements</h2>
+      <ul class="simple">
+        <li>Completed NYSC service year, Jan&ndash;Nov 2024, as a software engineer at Givitec Software Company.</li>
+      </ul>
+    </section>
+  </div>
+
+</div>
+</body>
+</html>

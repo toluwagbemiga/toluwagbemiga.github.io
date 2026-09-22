@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    width: 1200px; height: 630px;
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    background: linear-gradient(135deg, #0c1110 0%, #14201d 55%, #0c1110 100%);
+    color: #eef1ef;
+    overflow: hidden;
+  }
+  .wrap {
+    width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 88px 96px;
+    position: relative;
+  }
+  .glow {
+    position: absolute;
+    width: 640px; height: 640px;
+    right: -180px; top: -180px;
+    background: radial-gradient(circle, rgba(61,218,196,0.22) 0%, rgba(61,218,196,0) 70%);
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(61,218,196,0.12);
+    color: #7fe6d2;
+    padding: 10px 20px;
+    border-radius: 999px;
+    font-size: 20px;
+    font-weight: 700;
+    width: fit-content;
+    margin-bottom: 28px;
+  }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: currentColor; }
+  h1 { font-size: 68px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 14px; }
+  .role { font-size: 32px; font-weight: 700; color: #6ee9d6; margin-bottom: 22px; }
+  .desc { font-size: 24px; color: #b7c2bc; max-width: 900px; line-height: 1.45; }
+  .footer { position: absolute; bottom: 60px; left: 96px; font-size: 22px; color: #7fe6d2; font-weight: 700; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="glow"></div>
+    <span class="badge"><span class="dot"></span>Open to new roles</span>
+    <h1>Tolulope Gbenga</h1>
+    <p class="role">Software Engineer &mdash; Android &amp; Blockchain</p>
+    <p class="desc">Shipping Kotlin &amp; Jetpack Compose at ALAT (2M+ users). Full-stack web + Solidity smart contract auditing.</p>
+    <div class="footer">toluwagbemiga.github.io</div>
+  </div>
+</body>
+</html>
