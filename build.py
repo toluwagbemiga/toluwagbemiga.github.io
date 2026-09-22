@@ -1,4 +1,4 @@
-"""Builds index.html (and the CV PDF) from data/profile.json.
+﻿"""Builds index.html (and the CV PDF) from data/profile.json.
 
 Run:  python build.py            # rebuild index.html
       python build.py --pdf      # also re-print assets/Tolulope_Gbenga_CV.pdf from cv.html
@@ -56,7 +56,7 @@ def current_technical_company(experience: list[dict]) -> str:
 
 
 def build(profile: dict) -> str:
-    env = Environment(loader=FileSystemLoader(ROOT / "templates"), autoescape=select_autoescape(["html"]), trim_blocks=True, lstrip_blocks=True)
+    env = Environment(loader=FileSystemLoader(ROOT / "_templates"), autoescape=select_autoescape(["html"]), trim_blocks=True, lstrip_blocks=True)
     # keep the strongest few bullets per role: the CV carries the full list
     experience = [{**e, "highlights": e["highlights"][:4]} for e in profile["experience"] if e.get("highlights")]
     projects = sorted(

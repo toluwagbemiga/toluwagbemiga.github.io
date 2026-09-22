@@ -1,0 +1,6 @@
+﻿# The site is plain HTML; keep Jekyll away from the generator files.
+exclude:
+  - build.py
+  - data
+  - README.md
+
