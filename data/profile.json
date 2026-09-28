@@ -127,20 +127,6 @@
  ],
  "experience": [
   {
-   "title": "Relationship Manager",
-   "company": "First Bank Nigeria",
-   "location": "",
-   "start": "Aug 2025",
-   "end": "Present",
-   "highlights": [
-    "Collaborated closely with the Team Lead to ensure seamless operations within the sales and relationship management team, fostering strong team dynamics and enhancing service delivery, which led to increased client satisfaction and loyalty among affluent customers.",
-    "Analyzed client feedback and sales metrics to identify areas for improvement, supporting strategic decisions that enhance sales effectiveness and client engagement.",
-    "Participated in cross-departmental initiatives to promote collaboration and streamline processes, contributing to greater operational efficiency and a unified approach to client relationship management.",
-    "Assisted in developing engagement strategies tailored to affluent clients, aligned with organizational objectives, which increased client retention and positively impacted overall profitability."
-   ],
-   "alt_titles": []
-  },
-  {
    "title": "Software Engineer (Android & Blockchain)",
    "company": "ALAT (Nigerian Financial Institution)",
    "location": "Hybrid",
@@ -173,6 +159,20 @@
     "Delivered WordPress sites with custom themes and plugins for clients including Fort Kovant Legal Practitioners, TheAcemanplus Ventures and the Olusegun Fadare Foundation.",
     "Built custom client platforms in Laravel, including immigration case-management systems with client portals and role-based admin panels.",
     "Built an internal Python lead-generation and outreach automation tool for the agency."
+   ],
+   "alt_titles": []
+  },
+  {
+   "title": "Relationship Manager",
+   "company": "First Bank Nigeria",
+   "location": "",
+   "start": "Nov 2024",
+   "end": "Jul 2025",
+   "highlights": [
+    "Collaborated closely with the Team Lead to ensure seamless operations within the sales and relationship management team, fostering strong team dynamics and enhancing service delivery, which led to increased client satisfaction and loyalty among affluent customers.",
+    "Analyzed client feedback and sales metrics to identify areas for improvement, supporting strategic decisions that enhance sales effectiveness and client engagement.",
+    "Participated in cross-departmental initiatives to promote collaboration and streamline processes, contributing to greater operational efficiency and a unified approach to client relationship management.",
+    "Assisted in developing engagement strategies tailored to affluent clients, aligned with organizational objectives, which increased client retention and positively impacted overall profitability."
    ],
    "alt_titles": []
   },
